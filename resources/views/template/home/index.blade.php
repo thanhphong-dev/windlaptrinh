@@ -41,7 +41,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
 
                     <!-- Banner 3: Mini App trên Zalo -->
                     <div class="items">
@@ -51,7 +51,8 @@
                                 <h2 class="">Tăng cường chăm sóc khách hàng trên nền tảng Zalo, hỗ trợ mua sắm và booking dễ dàng. Mở rộng tệp khách hàng trung thành với giải pháp Affiliate Marketing tiên tiến.</h2>
                                 <a class="event_btn btn_hover" data-toggle="modal" data-target="#informationForm"
                                     href="#information-form"><img src="{{ asset('images/icon/icon-phone.png') }}"
-                                        alt="Đăng ký tư vấn Mini App trên Zalo">Đăng ký tư vấn
+                                        alt="Đăng ký tư vấn Mini App trên Zalo">
+                                        Đăng ký tư vấn
                                 </a>
                             </div>
                             <div class="col-lg-6 col-12">
@@ -575,7 +576,7 @@
                                                 Tính năng cấp mã bảo hành online và tìm kiếm cửa hàng gần nhất, hiện đại hóa trải nghiệm khách hàng và nâng cao hình ảnh thương hiệu trên thị trường.
                                             </span>
                                         </p>
-                                       
+
                                     </div>
                                     <div class="view_app_details">
                                         <a href="job_apps/app-nganh-retail.html">Xem thêm</a>
@@ -607,7 +608,7 @@
                                                 Kết nối các tính năng hiện đại như Mini App, CRM, và cổng thanh toán, tạo nên hệ sinh thái quản lý bán hàng hiệu quả, đáp ứng mọi nhu cầu kinh doanh.
                                             </span>
                                         </p>
-                                        
+
                                     </div>
                                     <div class="view_app_details">
                                         <a href="job_apps/app-nganh-f-b.html">Xem thêm</a>
@@ -640,7 +641,7 @@
                                                 Thiết kế giao diện thân thiện, dễ sử dụng, nâng cao trải nghiệm người dùng, giúp khách hàng quản lý và vận hành hiệu quả hơn trên mọi thiết bị.
                                             </span>
                                         </p>
-                                        
+
                                     </div>
                                     <div class="view_app_details">
                                         <a href="job_apps/app-nganh-fitness.html">Xem thêm</a>
@@ -672,7 +673,7 @@
                                                 Quản lý và triển khai nội dung trên website, mạng xã hội, Mini App, và các nền tảng khác, đảm bảo thông điệp thương hiệu được truyền tải nhất quán và hiệu quả.
                                             </span>
                                         </p>
-                                        
+
                                     </div>
                                     <div class="view_app_details">
                                         <a href="job_apps/app-nganh-spa.html">Xem thêm</a>
@@ -704,7 +705,7 @@
                                                 Đảm bảo nội dung được tối ưu từ tiêu đề, thẻ meta, đến cấu trúc bài viết, giúp tăng thứ hạng website trên các công cụ tìm kiếm.
                                             </span>
                                         </p>
-                                        
+
                                     </div>
                                     <div class="view_app_details">
                                         <a href="job_apps/app-nganh-auto.html">Xem thêm</a>
@@ -712,7 +713,7 @@
                                 </div>
                             </div>
                         </div>
-                      
+
                     </div>
                 </div>
 
@@ -724,7 +725,7 @@
             </div>
         </div>
     </section>
-   
+
     <section class="talk_cnv">
         <div class="container">
             <div class="headbox">
@@ -817,7 +818,7 @@
                             <h3 class="title"><a class="smooth"
                                     href="#"
                                     title="">Nhà hàng Casa Viet Tây Ba Nha</a></h3>
-                            <div class="description">Giải pháp Marketing về website bên Wind rất hiệu quả trong việc sáng tạo nội dung, 
+                            <div class="description">Giải pháp Marketing về website bên Wind rất hiệu quả trong việc sáng tạo nội dung,
                                 hỗ trợ brand đưa ra các giải pháp phù hợp, sáng tạo keyword chuẩn SEO cho website hiệu quả rõ rệt, cảm ơn các bạn đã hỗ trợ brantech.</div>
                         </div>
                         <a class="img"
@@ -1024,7 +1025,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
@@ -1080,7 +1081,7 @@
                                     href="blogs/tin-tuc/huong-dan-toi-uu-mini-app-cho-nguoi-moi-bat-dau.html"
                                     target="_blank">
                                     <img class="news-blog fade show lazy"
-                                        data-src="/storage/mini-app-optimization-guide.png" 
+                                        data-src="/storage/mini-app-optimization-guide.png"
                                         alt="Hướng dẫn tối ưu Mini App cho người mới bắt đầu"
                                         title="Hướng dẫn tối ưu Mini App cho người mới bắt đầu">
                                 </a>
@@ -1089,7 +1090,7 @@
                                         class="article-title">Hướng dẫn tối ưu Mini App cho người mới bắt đầu</a>
                                 </div>
                                 <div class="description">
-                                    Bạn muốn xây dựng Mini App nhưng chưa biết bắt đầu từ đâu? Hãy cùng khám phá các mẹo và chiến lược 
+                                    Bạn muốn xây dựng Mini App nhưng chưa biết bắt đầu từ đâu? Hãy cùng khám phá các mẹo và chiến lược
                                     giúp bạn tối ưu hiệu quả Mini App ngay từ bước đầu tiên.
                                 </div>
                                 <div class="continue">
@@ -1098,7 +1099,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                     </div>
                     <div class="col-lg-12 col-12 text-center load_more_new">
                         <a href="blogs/tin-tuc.html">→ Xem tất cả bài viết</a>
@@ -1163,7 +1164,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                     </div>
                     <div class="col-lg-12 col-12 text-center load_more_new">
                         <a href="ebooks/thu-vien-ebook.html">→ Xem tất cả tài nguyên</a>
@@ -1172,5 +1173,5 @@
             </div>
         </div>
     </section>
-    
+
 @endsection

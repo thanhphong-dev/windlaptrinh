@@ -21,7 +21,7 @@
     <script src={{ asset('assets/libs/choices.js/public/assets/scripts/choices.min.js') }}></script>
 
     <!-- Main Theme Js -->
-    <script src={{ asset('assets/js/main.js') }}></script> 
+    <script src={{ asset('assets/js/main.js') }}></script>
 
     <!-- Bootstrap Css -->
     <link id="style" href={{ asset('assets/libs/bootstrap/css/bootstrap.min.css') }} rel="stylesheet">
@@ -63,94 +63,6 @@
         href={{ asset('assets/libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css') }}>
     <link rel="stylesheet"
         href={{ asset('assets/libs/filepond-plugin-image-edit/filepond-plugin-image-edit.min.css') }}>
-
-        <script src="https://cdn.tiny.cloud/1/q9vnaj1ec6p9zkkkn1jh1vrg64g8oswffc4evf6sudu6o418/tinymce/4/tinymce.min.js"
-        referrerpolicy="origin"></script>
-        <script>
-            var editor_config = {
-                path_absolute: "http://localhost/project/website/2024/waikiki/public/",
-                selector: "textarea, #mytextareaEditPermission, #mytextareaEditPostVi, #mytextareaEditRole, #mytextareaEditPostEn, #mytextareaEditCategory, #mytextareaEditPromotionVi, #mytextareaEditPromotionEn, #mytextareaEditPostVi, #mytextareaEditPostEn, #mytextareaEditHistoryVi, #mytextareaEditHistoryEn , #mytextareaEditPosition",
-                plugins: [
-                    "advlist autolink lists link image charmap print preview hr anchor pagebreak",
-                    "searchreplace wordcount visualblocks visualchars code fullscreen",
-                    "insertdatetime media nonbreaking save table contextmenu directionality",
-                    "emoticons template paste textcolor colorpicker textpattern"
-                ],
-                toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image media",
-                relative_urls: false,
-    
-                // Đường dẫn upload hình ảnh
-                images_upload_url: "{{ route('upload.route.name') }}",
-    
-                // Handler upload hình ảnh
-                images_upload_handler: function(blobInfo, success, failure) {
-                    var xhr, formData;
-    
-                    xhr = new XMLHttpRequest();
-                    xhr.withCredentials = true;
-    
-                    // Thêm CSRF token vào header
-                    xhr.open('POST', "{{ route('upload.route.name') }}");
-                    xhr.setRequestHeader('X-CSRF-TOKEN', document.querySelector('meta[name="csrf-token"]').getAttribute(
-                        'content'));
-    
-                    xhr.onload = function() {
-                        if (xhr.status < 200 || xhr.status >= 300) {
-                            failure('HTTP Error: ' + xhr.status);
-                            return;
-                        }
-    
-                        var json;
-    
-                        try {
-                            json = JSON.parse(xhr.responseText);
-                        } catch (e) {
-                            failure('Invalid JSON: ' + xhr.responseText);
-                            return;
-                        }
-    
-                        if (!json || typeof json.location != 'string') {
-                            failure('Invalid JSON: ' + xhr.responseText);
-                            return;
-                        }
-    
-                        success(json.location);
-                    };
-    
-                    // Tạo đối tượng FormData để gửi hình ảnh
-                    formData = new FormData();
-                    formData.append('file', blobInfo.blob(), blobInfo.filename());
-    
-                    xhr.send(formData);
-                },
-    
-                file_browser_callback: function(field_name, url, type, win) {
-                    var x = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName(
-                        'body')[0].clientWidth;
-                    var y = window.innerHeight || document.documentElement.clientHeight || document
-                        .getElementsByTagName('body')[0].clientHeight;
-    
-                    var cmsURL = editor_config.path_absolute + 'laravel-filemanager?field_name=' + field_name;
-                    if (type == 'image') {
-                        cmsURL = cmsURL + "&type=Images";
-                    } else {
-                        cmsURL = cmsURL + "&type=Files";
-                    }
-    
-                    // Mở cửa sổ file manager
-                    tinyMCE.activeEditor.windowManager.open({
-                        file: cmsURL,
-                        title: 'Filemanager',
-                        width: x * 0.8,
-                        height: y * 0.8,
-                        resizable: "yes",
-                        close_previous: "no"
-                    });
-                }
-    
-            };
-            tinymce.init(editor_config);
-        </script>
 
 </head>
 
@@ -1593,13 +1505,13 @@
                                     <a href="javascript:void(0)">Bài viết</a>
                                 </li>
                                 <li class="slide">
-                                    <a href={{ route('post.list') }} class="side-menu__item">Danh sách</a>
+                                    <a href="#" class="side-menu__item">Danh sách</a>
                                 </li>
                                 <li class="slide">
-                                    <a href={{ route('categories-post.list') }} class="side-menu__item">Danh mục</a>
+                                    <a href="#" class="side-menu__item">Danh mục</a>
                                 </li>
                                 <li class="slide">
-                                    <a href={{ route('instagram.list') }} class="side-menu__item">Instagram</a>
+                                    <a href="#" class="side-menu__item">Instagram</a>
                                 </li>
                                 <li class="slide">
                                     <a href="gallery.html" class="side-menu__item">Quản lý Tags</a>
@@ -1634,10 +1546,10 @@
                                     <a href="javascript:void(0)">Thực đơn </a>
                                 </li>
                                 <li class="slide">
-                                    <a href={{ route('menu.list') }} class="side-menu__item">Danh sách món ăn </a>
+                                    <a href="#" class="side-menu__item">Danh sách món ăn </a>
                                 </li>
                                 <li class="slide">
-                                    <a href={{ route('categories-menu.list') }} class="side-menu__item">Danh mục món
+                                    <a href="#" class="side-menu__item">Danh mục món
                                     </a>
                                 </li>
                                 <li class="slide">
@@ -1673,15 +1585,15 @@
                                     <a href="javascript:void(0)">Sự giải trí </a>
                                 </li>
                                 <li class="slide">
-                                    <a href={{ route('entertainment.list') }} class="side-menu__item">Danh sách </a>
+                                    <a href="#" class="side-menu__item">Danh sách </a>
                                 </li>
                                 <li class="slide">
-                                    <a href={{ route('categories-entertainment.list') }} class="side-menu__item">Danh
+                                    <a href="#" class="side-menu__item">Danh
                                         mục</a>
-                                </li> 
+                                </li>
                                 <li class="slide">
                                     <a href="#" class="side-menu__item">Hình ảnh </a>
-                                </li> 
+                                </li>
 
 
                             </ul>
@@ -1713,12 +1625,12 @@
                                     <a href="javascript:void(0)">Lịch sử </a>
                                 </li>
                                 <li class="slide">
-                                    <a href={{ route('history.list') }} class="side-menu__item">Danh sách </a>
+                                    <a href="#" class="side-menu__item">Danh sách </a>
                                 </li>
                                 <li class="slide">
-                                    <a href={{ route('categories-history.list') }} class="side-menu__item">Danh
+                                    <a href="#" class="side-menu__item">Danh
                                         mục</a>
-                                </li> 
+                                </li>
 
 
                             </ul>
@@ -1749,12 +1661,12 @@
                                     <a href="javascript:void(0)">Ưu đãi </a>
                                 </li>
                                 <li class="slide">
-                                    <a href={{ route('promotion.list') }} class="side-menu__item">Danh sách </a>
+                                    <a href="#" class="side-menu__item">Danh sách </a>
                                 </li>
                                 <li class="slide">
-                                    <a href={{ route('categories-promotion.list') }} class="side-menu__item">Danh
+                                    <a href="#" class="side-menu__item">Danh
                                         mục</a>
-                                </li> 
+                                </li>
 
 
                             </ul>
@@ -1786,12 +1698,12 @@
                                     <a href="javascript:void(0)">Hình ảnh </a>
                                 </li>
                                 <li class="slide">
-                                    <a href={{ route('image.list') }} class="side-menu__item">Danh sách </a>
+                                    <a href="#" class="side-menu__item">Danh sách </a>
                                 </li>
                                 <li class="slide">
-                                    <a href={{ route('categories-image.list') }} class="side-menu__item">Danh
+                                    <a href="#" class="side-menu__item">Danh
                                         mục</a>
-                                </li> 
+                                </li>
 
 
                             </ul>
@@ -1950,10 +1862,10 @@
                                     <a href="javascript:void(0)">Nhân sự</a>
                                 </li>
                                 <li class="slide">
-                                    <a href={{ route('user.list') }} class="side-menu__item">Danh sách</a>
+                                    <a href="#" class="side-menu__item">Danh sách</a>
                                 </li>
                                 <li class="slide">
-                                    <a href={{ route('position.list') }} class="side-menu__item">Chức vụ</a>
+                                    <a href="#" class="side-menu__item">Chức vụ</a>
                                 </li>
                             </ul>
                         </li>
@@ -1988,10 +1900,10 @@
                                     <a href="javascript:void(0)">Cài đặt</a>
                                 </li>
                                 <li class="slide">
-                                    <a href={{ route('permission.list') }} class="side-menu__item">Phân quyền</a>
+                                    <a href="#" class="side-menu__item">Phân quyền</a>
                                 </li>
                                 <li class="slide">
-                                    <a href={{ route('role.list') }} class="side-menu__item">
+                                    <a href="#" class="side-menu__item">
                                         Vai trò
                                     </a>
                                 </li>

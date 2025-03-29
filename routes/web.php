@@ -14,6 +14,6 @@ Auth::routes();
 Route::get('/', [HomeController::class, 'index'])->name('home.index');
 
 Route::middleware('auth')->group(function(){
-    
+
     Route::get('admin', [DashBoardController::class, 'index']);
 });
