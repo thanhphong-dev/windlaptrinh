@@ -1862,7 +1862,7 @@
                                     <a href="javascript:void(0)">Nhân sự</a>
                                 </li>
                                 <li class="slide">
-                                    <a href="#" class="side-menu__item">Danh sách</a>
+                                    <a href={{ route('users.index') }} class="side-menu__item">Danh sách</a>
                                 </li>
                                 <li class="slide">
                                     <a href="#" class="side-menu__item">Chức vụ</a>
