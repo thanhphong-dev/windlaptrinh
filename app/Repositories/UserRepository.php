@@ -11,4 +11,9 @@ class UserRepository implements UserRepositoryInferface
     {
         return User::all();
     }
+
+    public function add( array $user)
+    {
+       return User::create($user);
+    }
 }

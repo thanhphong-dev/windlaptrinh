@@ -106,50 +106,68 @@
                                 <div class="col-12 col-xl-9 text-xl-end text-start">
                                     <button class="btn btn-sm btn-primary btn-wave waves-light" data-bs-toggle="modal"
                                         data-bs-target="#create-categories">
-                                        <i class="ri-add-line fw-medium align-middle me-1"></i> Danh mục
+                                        <i class="ri-add-line fw-medium align-middle me-1"></i> Nhân sư
                                     </button>
-                                    <!-- Start::add categories modal -->
-                                    <div class="modal modal-lg fade mr-0" id="create-categories" tabindex="-1"
-                                        aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h6 class="modal-title">Thêm danh mục</h6>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                        aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body px-4">
-                                                    <div class="row gy-2">
-                                                        <div class="col-xl-6 col-12">
-                                                            <label for="name" class="form-label">Tên</label>
-                                                            <input type="text" class="form-control" id="name"
-                                                                name="name" placeholder="nhập tên...">
-                                                        </div>
-                                                        <div class="col-xl-6 col-12">
-                                                            <label class="form-label">Danh mục</label>
-                                                            <select name="parent_id" class="form-control" id="parent_id">
-                                                                <option value="0">Không có</option>
-                                                                <!-- Gọi hàm đệ quy để hiển thị danh mục phân cấp -->
-
-                                                            </select>
-                                                        </div>
-                                                        <div class="col-xl-12">
-                                                            <label for="description" class="form-label">Nội dung</label>
-                                                            <textarea class="form-control" id="description" name="description" placeholder="nhập nội dung..." rows="5"></textarea>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-light"
-                                                        data-bs-dismiss="modal">Hủy</button>
-                                                    <button type="submit" class="btn btn-primary">Xác nhận</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End::add categories modal -->
+                                   
                                 </div>
+                                 <!-- Start::add categories modal -->
+                                 <div class="modal modal-lg fade mr-0" id="create-categories" tabindex="-1"
+                                 aria-hidden="true">
+                                 <div class="modal-dialog modal-dialog-centered">
+                                     <div class="modal-content">
+                                         <div class="modal-header">
+                                             <h6 class="modal-title">Thêm mới</h6>
+                                             <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                 aria-label="Close"></button>
+                                         </div>
+                                         <div class="modal-body px-4">
+                                             <div class="row gy-2">
+                                                 <div class="col-xl-6 col-12">
+                                                     <label for="name" class="form-label">Họ và tên</label>
+                                                     <input type="text" class="form-control" id="name"
+                                                         name="name" placeholder="nhập họ và tên...">
+                                                 </div>
+                                                 <div class="col-xl-6 col-12">
+                                                    <label class="form-label">Vai trò</label>
+                                                    <select name="type" class="form-control" id="type">
+                                                        @foreach(\App\Enums\UserType::cases() as $role)
+                                                            <option value="{{ $role->value }}">{{ $role->lable() }}</option>
+                                                        @endforeach
+                                                    </select>
+                                                </div>
+                                                <div class="col-xl-6 col-12">
+                                                    <label for="password" class="form-label">Mật khẩu</label>
+                                                    <input type="password" class="form-control" id="password"
+                                                        name="password" placeholder="nhập mật khẩu...">
+                                                </div>
+                                                <div class="col-xl-6 col-12">
+                                                    <label for="password_confirm" class="form-label">Xác nhận mật khẩu</label>
+                                                    <input type="password" class="form-control" id="password_confirm"
+                                                        name="password_confirm" placeholder="nhập lại mật khẩu...">
+                                                </div>
+                                                <div class="col-12">
+                                                    <label for="email" class="form-label">Email</label>
+                                                    <input type="text" class="form-control" id="email"
+                                                        name="email" placeholder="nhập lại email...">
+                                                </div>
+
+                                                <div class="col-12">
+                                                    <label for="avatar_url" class="form-label">Email</label>
+                                                    <input type="file" class="form-control" id="avatar_url"
+                                                        name="avatar_url">
+                                                </div>
+
+                                             </div>
+                                         </div>
+                                         <div class="modal-footer">
+                                             <button type="button" class="btn btn-light"
+                                                 data-bs-dismiss="modal">Hủy</button>
+                                             <button type="submit" class="btn btn-primary">Xác nhận</button>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                             <!-- End::add categories modal -->
                             </div>
 
                             <div class="table-responsive">
@@ -157,28 +175,26 @@
                                     <thead>
                                         <tr>
                                             <th scope="col">#</th>
-                                            <th scope="col">Order</th>
-                                            <th scope="col">Date</th>
-                                            <th scope="col">Customer</th>
-                                            <th scope="col">Action</th>
+                                            <th scope="col">Họ và tên</th>
+                                            <th scope="col">Email</th>
+                                            <th scope="col">Chức vụ</th>
+                                            <th scope="col">Chức năng</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @forelse ( $users as $user )
                                         <tr>
-                                            <td>1</td>
-                                            <th scope="row">
-                                                #0007
-                                            </th>
-                                            <td>
-                                                <span class="badge bg-light text-dark">26-04-2022</span>
+                                            <td>{{ $loop->iteration }}</td>
+                                            <td scope="row">
+                                              {{ $user->name }}
                                             </td>
                                             <td>
-                                                <div class="d-flex align-items-center">
-                                                    <span class="avatar avatar-xs me-2 online avatar-rounded">
-                                                        <img src={{ asset('assets/images/faces/3.jpg') }} alt="img">
-                                                    </span>Mayor Kelly
-                                                </div>
+                                                {{ $user->email }}
                                             </td>
+                                            <td>
+                                                <span class="badge bg-light text-dark">{{ $user->type->lable() }}</span>
+                                            </td>
+                                           
                                             <td class="text-center">
                                                 <div class="dropdown ms-2">
                                                     <button
@@ -197,72 +213,11 @@
                                                 </div>
                                             </td>
                                         </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <th scope="row">
-                                                #0008
-                                            </th>
-                                            <td>
-                                                <span class="badge bg-light text-dark">15-02-2022</span>
-                                            </td>
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <span class="avatar avatar-xs me-2 online avatar-rounded">
-                                                        <img src={{ asset('assets/images/faces/6.jpg') }} alt="img">
-                                                    </span>Wicky Kross
-                                                </div>
-                                            </td>
-                                            <td class="text-center">
-                                                <div class="dropdown ms-2">
-                                                    <button
-                                                        class="btn btn-icon btn-secondary-light btn-sm btn-wave waves-light"
-                                                        type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                        <i class="ti ti-dots-vertical"></i>
-                                                    </button>
-                                                    <ul class="dropdown-menu">
-                                                        <li>
-                                                            <a class="dropdown-item" href="javascript:void(0);"> Sửa </a>
-                                                        </li>
-                                                        <li>
-                                                            <a class="dropdown-item" href="javascript:void(0);"> Xóa </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <th scope="row">
-                                                #0009
-                                            </th>
-                                            <td>
-                                                <span class="badge bg-light text-dark">23-05-2022</span>
-                                            </td>
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <span class="avatar avatar-xs me-2 online avatar-rounded">
-                                                        <img src={{ asset('assets/images/faces/1.jpg') }} alt="img">
-                                                    </span>Julia Cam
-                                                </div>
-                                            </td>
-                                            <td class="text-center">
-                                                <div class="dropdown ms-2">
-                                                    <button
-                                                        class="btn btn-icon btn-secondary-light btn-sm btn-wave waves-light"
-                                                        type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                        <i class="ti ti-dots-vertical"></i>
-                                                    </button>
-                                                    <ul class="dropdown-menu">
-                                                        <li>
-                                                            <a class="dropdown-item" href="javascript:void(0);"> Sửa </a>
-                                                        </li>
-                                                        <li>
-                                                            <a class="dropdown-item" href="javascript:void(0);"> Xóa </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                        </tr>
+                                        @empty
+                                            
+                                        @endforelse
+                                        
+                                       
 
                                     </tbody>
                                 </table>

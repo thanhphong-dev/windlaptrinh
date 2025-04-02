@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreUserRequest;
 use App\Interfaces\UserRepositoryInferface;
+use Exception;
+use Illuminate\Container\Attributes\Log;
+use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
@@ -18,11 +21,9 @@ class EmployeeController extends Controller
 
     public function index(Request $request)
     {
-        // return response()->json([
-        //     'data' => $this->userRepository->getAll()
-        // ]);
+        $users = $this->userRepository->getAll();
 
-        return view('admin.employee.list');
+        return view('admin.employee.list', compact('users'));
     }
 
     /**
@@ -37,5 +38,24 @@ class EmployeeController extends Controller
         return view('admin.employee.create');
     }
 
-    public function store(StoreUserRequest $request) {}
+    public function store(StoreUserRequest $request)
+    {
+        try {
+
+            $data = $request->validated();
+
+            if ($data->hasFile('avatar_url')) {
+                $data['avatar_url'] = uploadImage($data['avatar_url'], '', 'employee/');
+            }
+
+            $this->userRepository->add($data);
+
+            toastr()->success('success');
+            return redirect()->back();
+
+        } catch (Exception $e) {
+
+            toastr()->error('error');
+        }
+    }
 }

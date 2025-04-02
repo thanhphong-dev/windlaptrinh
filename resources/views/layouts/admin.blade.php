@@ -15,54 +15,54 @@
         content="bootstrap template, admin panel bootstrap, bootstrap dashboard, admin, admin dashboard template, dashboard template, html css templates, dashboard, template dashboard,  bootstrap dashboard template, dashboard html css, bootstrap admin dashboard,  bootstrap admin, dashboard template, bootstrap5 admin template">
 
     <!-- Favicon -->
-    <link rel="icon" href={{ asset('/images/logo/logo-dark.png') }} type="image/x-icon">
+    <link rel="icon" href="{{ asset('/images/logo/logo-dark.png') }}" type="image/x-icon">
 
     <!-- Choices JS -->
-    <script src={{ asset('assets/libs/choices.js/public/assets/scripts/choices.min.js') }}></script>
+    <script src="{{ asset('assets/libs/choices.js/public/assets/scripts/choices.min.js') }}"></script>
 
     <!-- Main Theme Js -->
-    <script src={{ asset('assets/js/main.js') }}></script>
+    <script src="{{ asset('assets/js/main.js') }}"></script>
 
     <!-- Bootstrap Css -->
-    <link id="style" href={{ asset('assets/libs/bootstrap/css/bootstrap.min.css') }} rel="stylesheet">
+    <link id="style" href="{{ asset('assets/libs/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Style Css -->
-    <link href={{ asset('assets/css/styles.css') }} rel="stylesheet">
+    <link href="{{ asset('assets/css/styles.css') }}" rel="stylesheet">
 
     <!-- Admin Css -->
-    <link href={{ asset('assets/css/admin.css') }} rel="stylesheet">
+    <link href="{{ asset('assets/css/admin.css') }}" rel="stylesheet">
 
     <!-- Icons Css -->
-    <link href={{ asset('assets/css/icons.css') }} rel="stylesheet">
+    <link href="{{ asset('assets/css/icons.css') }}" rel="stylesheet">
 
     <!-- Node Waves Css -->
-    <link href={{ asset('assets/libs/node-waves/waves.min.css') }} rel="stylesheet">
+    <link href="{{ asset('assets/libs/node-waves/waves.min.css') }}" rel="stylesheet">
 
     <!-- Simplebar Css -->
-    <link href={{ asset('assets/libs/simplebar/simplebar.min.css') }} rel="stylesheet">
+    <link href="{{ asset('assets/libs/simplebar/simplebar.min.css') }}" rel="stylesheet">
 
     <!-- Color Picker Css -->
-    <link rel="stylesheet" href={{ asset('assets/libs/flatpickr/flatpickr.min.css') }}>
-    <link rel="stylesheet" href={{ asset('assets/libs/@simonwep/pickr/themes/nano.min.css') }}>
+    <link rel="stylesheet" href="{{ asset('assets/libs/flatpickr/flatpickr.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/libs/@simonwep/pickr/themes/nano.min.css') }}">
 
     <!-- Choices Css -->
-    <link rel="stylesheet" href={{ asset('assets/libs/choices.js/public/assets/styles/choices.min.css') }}>
+    <link rel="stylesheet" href="{{ asset('assets/libs/choices.js/public/assets/styles/choices.min.css') }}">
 
     <!-- FlatPickr CSS -->
-    <link rel="stylesheet" href={{ asset('assets/libs/flatpickr/flatpickr.min.css') }}>
+    <link rel="stylesheet" href="{{ asset('assets/libs/flatpickr/flatpickr.min.css') }}">
 
     <!-- Auto Complete CSS -->
-    <link rel="stylesheet" href={{ asset('assets/libs/@tarekraafat/autocomplete.js/css/autoComplete.css') }}>
+    <link rel="stylesheet" href="{{ asset('assets/libs/@tarekraafat/autocomplete.js/css/autoComplete.css') }}">
 
     <!-- Prism CSS -->
-    <link rel="stylesheet" href={{ asset('assets/libs/prismjs/themes/prism-coy.min.css') }}>
+    <link rel="stylesheet" href="{{ asset('assets/libs/prismjs/themes/prism-coy.min.css') }}">
 
 
-    <link rel="stylesheet" href={{ asset('assets/libs/filepond/filepond.min.css') }}>
+    <link rel="stylesheet" href="{{ asset('assets/libs/filepond/filepond.min.css') }}">
     <link rel="stylesheet"
-        href={{ asset('assets/libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css') }}>
+        href="{{ asset('assets/libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css') }}">
     <link rel="stylesheet"
-        href={{ asset('assets/libs/filepond-plugin-image-edit/filepond-plugin-image-edit.min.css') }}>
+        href="{{ asset('assets/libs/filepond-plugin-image-edit/filepond-plugin-image-edit.min.css') }}">
 
 </head>
 
@@ -558,7 +558,7 @@
 
     <!-- Loader -->
     <div id="loader">
-        <img src={{ asset('assets/images/media/loader.svg') }} alt="">
+        <img src="{{ asset('assets/images/media/loader.svg') }}" alt="">
     </div>
     <!-- Loader -->
 
@@ -576,13 +576,13 @@
                     <div class="header-element">
                         <div class="horizontal-logo">
                             <a href="index.html" class="header-logo">
-                                <img src={{ asset('images/logo/logo-dark.png') }} alt="logo"
+                                <img src="{{ asset('images/logo/logo-dark.png') }}" alt="logo"
                                     class="desktop-logo">
-                                <img src={{ asset('images/logo/logo-light.png') }} alt="logo"
+                                <img src="{{ asset('images/logo/logo-light.png') }}" alt="logo"
                                     class="toggle-dark">
-                                <img src={{ asset('images/logo/logo-light.png') }} alt="logo"
+                                <img src="{{ asset('images/logo/logo-light.png') }}" alt="logo"
                                     class="desktop-dark">
-                                <img src={{ asset('images/logo/logo-dark.png') }} alt="logo" class="toggle-logo">
+                                <img src="{{ asset('images/logo/logo-dark.png') }}" alt="logo" class="toggle-logo">
                             </a>
                         </div>
                     </div>
@@ -695,7 +695,7 @@
                                     href="javascript:void(0);">
                                     <div class="d-flex align-items-center">
                                         <span class="avatar avatar-rounded avatar-xs lh-1 me-2">
-                                            <img src={{ asset('assets/images/flags/us_flag.jpg') }} alt="img">
+                                            <img src="{{ asset('assets/images/flags/us_flag.jpg') }}" alt="img">
                                         </span>
                                         English
                                     </div>
@@ -707,7 +707,7 @@
                                     href="javascript:void(0);">
                                     <div class="d-flex align-items-center">
                                         <span class="avatar avatar-rounded avatar-xs lh-1 me-2">
-                                            <img src={{ asset('assets/images/flags/spain_flag.jpg') }} alt="img">
+                                            <img src="{{ asset('assets/images/flags/spain_flag.jpg') }}" alt="img">
                                         </span>
                                         español
                                     </div>
@@ -719,7 +719,7 @@
                                     href="javascript:void(0);">
                                     <div class="d-flex align-items-center">
                                         <span class="avatar avatar-rounded avatar-xs lh-1 me-2">
-                                            <img src={{ asset('assets/images/flags/french_flag.jpg') }}
+                                            <img src="{{ asset('assets/images/flags/french_flag.jpg') }}"
                                                 alt="img">
                                         </span>
                                         français
@@ -732,7 +732,7 @@
                                     href="javascript:void(0);">
                                     <div class="d-flex align-items-center">
                                         <span class="avatar avatar-rounded avatar-xs lh-1 me-2">
-                                            <img src={{ asset('assets/images/flags/uae_flag.jpg') }} alt="img">
+                                            <img src="{{ asset('assets/images/flags/uae_flag.jpg') }}" alt="img">
                                         </span>
                                         عربي
                                     </div>
@@ -744,7 +744,7 @@
                                     href="javascript:void(0);">
                                     <div class="d-flex align-items-center">
                                         <span class="avatar avatar-rounded avatar-xs lh-1 me-2">
-                                            <img src={{ asset('assets/images/flags/germany_flag.jpg') }}
+                                            <img src="{{ asset('assets/images/flags/germany_flag.jpg') }}"
                                                 alt="img">
                                         </span>
                                         DE
@@ -757,7 +757,7 @@
                                     href="javascript:void(0);">
                                     <div class="d-flex align-items-center">
                                         <span class="avatar avatar-rounded avatar-xs lh-1 me-2">
-                                            <img src={{ asset('assets/images/flags/china_flag.jpg') }} alt="img">
+                                            <img src="{{ asset('assets/images/flags/china_flag.jpg') }}" alt="img">
                                         </span>
                                         中国人
                                     </div>
@@ -884,7 +884,7 @@
                                             <div class="d-flex align-items-start">
                                                 <div class="pe-2 lh-1"> <span
                                                         class="avatar avatar-md avatar-rounded svg-white">
-                                                        <img src={{ asset('assets/images/faces/2.jpg') }}
+                                                        <img src="{{ asset('assets/images/faces/2.jpg') }}"
                                                             alt="img">
                                                     </span>
                                                 </div>
@@ -935,7 +935,7 @@
                                             <div class="d-flex align-items-start">
                                                 <div class="pe-2 lh-1"> <span
                                                         class="avatar avatar-md avatar-rounded svg-white">
-                                                        <img src={{ asset('assets/images/faces/6.jpg') }}
+                                                        <img src="{{ asset('assets/images/faces/6.jpg') }}"
                                                             alt="img">
                                                     </span>
                                                 </div>
@@ -984,7 +984,7 @@
                                             <div class="d-flex align-items-start">
                                                 <div class="pe-2 lh-1"> <span
                                                         class="avatar avatar-md avatar-rounded svg-white">
-                                                        <img src={{ asset('assets/images/faces/14.jpg') }}
+                                                        <img src="{{ asset('assets/images/faces/14.jpg') }}"
                                                             alt="img">
                                                     </span>
                                                 </div>
@@ -1335,7 +1335,7 @@
                             data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
                             <div class="d-flex align-items-center">
                                 <div class="me-xl-2 me-0">
-                                    <img src={{ asset('images/employee/' .  Auth::user()->image) }} alt="img"
+                                    <img src="{{ asset('images/employee/' .  Auth::user()->image) }}" alt="img"
                                         class="avatar avatar-sm avatar-rounded">
                                 </div>
                                 <div class="d-xl-block d-none lh-1">
@@ -1396,10 +1396,10 @@
             <!-- Start::main-sidebar-header -->
             <div class="main-sidebar-header">
                 <a href="index.html" class="header-logo">
-                    <img src={{ asset('images/logo/logo-dark.png') }} alt="logo" class="desktop-logo">
-                    <img src={{ asset('images/logo/logo-light.png') }} alt="logo" class="toggle-dark">
-                    <img src={{ asset('images/logo/logo-light.png') }} alt="logo" class="desktop-dark">
-                    <img src={{ asset('images/logo/logo-dark.png') }} alt="logo" class="toggle-logo">
+                    <img src="{{ asset('images/logo/logo-dark.png') }}" alt="logo" class="desktop-logo">
+                    <img src="{{ asset('images/logo/logo-light.png') }}" alt="logo" class="toggle-dark">
+                    <img src="{{ asset('images/logo/logo-light.png') }}" alt="logo" class="desktop-dark">
+                    <img src="{{ asset('images/logo/logo-dark.png') }}" alt="logo" class="toggle-logo">
                 </a>
             </div>
             <!-- End::main-sidebar-header -->
@@ -1438,10 +1438,10 @@
                                     <a href="">Dashboards</a>
                                 </li>
                                 <li class="slide">
-                                    <a href={{ asset('admin') }} class="side-menu__item">Doanh thu</a>
+                                    <a href="{{ asset('admin') }}" class="side-menu__item">Doanh thu</a>
                                 </li>
                                 <li class="slide">
-                                    <a href={{ asset('admin/dashboard') }} class="side-menu__item">Số liệu</a>
+                                    <a href="{{ asset('admin/dashboard') }}" class="side-menu__item">Số liệu</a>
                                 </li>
                             </ul>
                         </li>
@@ -1462,7 +1462,7 @@
                                     <a href="javascript:void(0);">Khách hàng</a>
                                 </li>
                                 <li class="slide">
-                                    <a href={{ url('admin/customer/list') }} class="side-menu__item">Danh sách</a>
+                                    <a href="{{ url('admin/customer/list') }}" class="side-menu__item">Danh sách</a>
                                 </li>
                                 <li class="slide">
                                     <a href="#" class="side-menu__item">Lịch sử mua hàng</a>
@@ -1862,7 +1862,7 @@
                                     <a href="javascript:void(0)">Nhân sự</a>
                                 </li>
                                 <li class="slide">
-                                    <a href={{ route('users.index') }} class="side-menu__item">Danh sách</a>
+                                    <a href="{{ route('users.index') }}" class="side-menu__item">Danh sách</a>
                                 </li>
                                 <li class="slide">
                                     <a href="#" class="side-menu__item">Chức vụ</a>
@@ -2004,80 +2004,79 @@
     <!-- Scroll To Top -->
 
     <!-- Popper JS -->
-    <script src={{ asset('assets/libs/@popperjs/core/umd/popper.min.js') }}></script>
+    <script src="{{ asset('assets/libs/@popperjs/core/umd/popper.min.js') }}"></script>
 
     <!-- Bootstrap JS -->
-    <script src={{ asset('assets/libs/bootstrap/js/bootstrap.bundle.min.js') }}></script>
+    <script src="{{ asset('assets/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
     <!-- Defaultmenu JS -->
-    <script src={{ asset('assets/js/defaultmenu.min.js') }}></script>
+    <script src="{{ asset('assets/js/defaultmenu.min.js') }}"></script>
 
     <!-- Node Waves JS-->
-    <script src={{ asset('assets/libs/node-waves/waves.min.js') }}></script>
+    <script src="{{ asset('assets/libs/node-waves/waves.min.js') }}"></script>
 
     <!-- Sticky JS -->
-    <script src={{ asset('assets/js/sticky.js') }}></script>
+    <script src="{{ asset('assets/js/sticky.js') }}"></script>
 
     <!-- Simplebar JS -->
-    <script src={{ asset('assets/libs/simplebar/simplebar.min.js') }}></script>
-    <script src={{ asset('assets/js/simplebar.js') }}></script>
+    <script src="{{ asset('assets/libs/simplebar/simplebar.min.js') }}"></script>
+    <script src="{{ asset('assets/js/simplebar.js') }}"></script>
 
     <!-- Auto Complete JS -->
-    <script src={{ asset('assets/libs/@tarekraafat/autocomplete.js/autoComplete.min.js') }}></script>
+    <script src="{{ asset('assets/libs/@tarekraafat/autocomplete.js/autoComplete.min.js') }}"></script>
 
     <!-- Color Picker JS -->
-    <script src={{ asset('assets/libs/@simonwep/pickr/pickr.es5.min.js') }}></script>
+    <script src="{{ asset('assets/libs/@simonwep/pickr/pickr.es5.min.js') }}"></script>
 
     <!-- Date & Time Picker JS -->
-    <script src={{ asset('assets/libs/flatpickr/flatpickr.min.js') }}></script>
+    <script src="{{ asset('assets/libs/flatpickr/flatpickr.min.js') }}"></script>
 
 
     <!-- Apex Charts JS -->
-    <script src={{ asset('assets/libs/apexcharts/apexcharts.min.js') }}></script>
+    <script src="{{ asset('assets/libs/apexcharts/apexcharts.min.js') }}"></script>
 
     <!-- Sales Dashboard -->
-    <script src={{ asset('assets/js/sales-dashboard.js') }}></script>
+    <script src="{{ asset('assets/js/sales-dashboard.js') }}"></script>
 
     <!-- Custom JS -->
-    <script src={{ asset('assets/js/custom.js') }}></script>
+    <script src="{{ asset('assets/js/custom.js') }}"></script>
 
 
     <!-- Custom-Switcher JS -->
-    <script src={{ asset('assets/js/custom-switcher.min.js') }}></script>
+    <script src="{{ asset('assets/js/custom-switcher.min.js') }}"></script>
 
     {{-- Admin JS --}}
-    <script src={{ asset('assets/js/admin.js') }}></script>
+    <script src="{{ asset('assets/js/admin.js') }}"></script>
 
     <!-- Alerts JS -->
 
     <!-- Prism JS -->
-    <script src={{ asset('assets/libs/prismjs/prism.js') }}></script>
-    <script src={{ asset('assets/js/prism-custom.js') }}></script>
+    <script src="{{ asset('assets/libs/prismjs/prism.js') }}"></script>
+    <script src="{{ asset('assets/js/prism-custom.js') }}"></script>
 
     <!-- Filepond JS -->
-    <script src={{ asset('assets/libs/filepond/filepond.min.js') }}></script>
-    <script src={{ asset('assets/libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.js') }}></script>
-    <script
-        src={{ asset('assets/libs/filepond-plugin-image-exif-orientation/filepond-plugin-image-exif-orientation.min.js') }}>
+    <script src="{{ asset('assets/libs/filepond/filepond.min.js') }}"></script>
+    <script src="{{ asset('assets/libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.js') }}"></script>
+    <script src="{{ asset('assets/libs/filepond-plugin-image-exif-orientation/filepond-plugin-image-exif-orientation.min.js') }}">
     </script>
-    <script src={{ asset('assets/libs/filepond-plugin-file-validate-size/filepond-plugin-file-validate-size.min.js') }}>
+    <script src="{{ asset('assets/libs/filepond-plugin-file-validate-size/filepond-plugin-file-validate-size.min.js') }}">
     </script>
-    <script src={{ asset('assets/libs/filepond-plugin-file-encode/filepond-plugin-file-encode.min.js') }}></script>
-    <script src={{ asset('assets/libs/filepond-plugin-image-edit/filepond-plugin-image-edit.min.js') }}></script>
-    <script src={{ asset('assets/libs/filepond-plugin-file-validate-type/filepond-plugin-file-validate-type.min.js') }}>
+    <script src="{{ asset('assets/libs/filepond-plugin-file-encode/filepond-plugin-file-encode.min.js') }}"></script>
+    <script src="{{ asset('assets/libs/filepond-plugin-image-edit/filepond-plugin-image-edit.min.js') }}"></script>
+    <script src="{{ asset('assets/libs/filepond-plugin-file-validate-type/filepond-plugin-file-validate-type.min.js') }}">
     </script>
-    <script src={{ asset('assets/libs/filepond-plugin-file-validate-type/filepond-plugin-file-validate-type.min.js') }}>
+    <script src="{{ asset('assets/libs/filepond-plugin-file-validate-type/filepond-plugin-file-validate-type.min.js') }}">
     </script>
-    <script src={{ asset('assets/libs/filepond-plugin-image-crop/filepond-plugin-image-crop.min.js') }}></script>
-    <script src={{ asset('assets/libs/filepond-plugin-image-resize/filepond-plugin-image-resize.min.js') }}></script>
-    <script src={{ asset('assets/libs/filepond-plugin-image-transform/filepond-plugin-image-transform.min.js') }}></script>
+    <script src="{{ asset('assets/libs/filepond-plugin-image-crop/filepond-plugin-image-crop.min.js') }}"></script>
+    <script src="{{ asset('assets/libs/filepond-plugin-image-resize/filepond-plugin-image-resize.min.js') }}"></script>
+    <script src="{{ asset('assets/libs/filepond-plugin-image-transform/filepond-plugin-image-transform.min.js') }}"></script>
 
     <!-- Fileupload JS -->
-    <script src={{ asset('assets/js/fileupload.js') }}></script>
+    <script src="{{ asset('assets/js/fileupload.js') }}"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
     </script>
 </body>
-
+ 
 </html>

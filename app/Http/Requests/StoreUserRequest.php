@@ -2,7 +2,10 @@
 
 namespace App\Http\Requests;
 
+use App\Enums\UserType;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Password;
+use Illuminate\Validation\Rules\Enum;
 
 class StoreUserRequest extends FormRequest
 {
@@ -22,7 +25,11 @@ class StoreUserRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'name'  => ['required', 'string', 'max:255'],
+            'email' => ['required', 'email', 'unique:users,email'],
+            'password' => ['required', 'string', Password::min(8)->uncompromised()],
+            'type' => ['required', new Enum(UserType::class)],
+            'avatar_url' => ['nullable', 'image', 'mimes:jpeg,png,jpg,gif', 'max:2048'],
         ];
     }
 }
