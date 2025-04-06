@@ -8,6 +8,7 @@ use App\Enums\UserType;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Str;
 
 class User extends Authenticatable
 {
@@ -23,7 +24,7 @@ class User extends Authenticatable
         'avatar_url',
         'email',
         'password',
-        'type',
+        'type', 
     ];
 
     /**
@@ -49,4 +50,5 @@ class User extends Authenticatable
             'type'  => UserType::class,
         ];
     }
+
 }
